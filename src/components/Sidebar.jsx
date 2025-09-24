@@ -2,11 +2,11 @@
 
 function SideBar() {
     return (
-        <div class="sidebar">
-            <li class="lisidebar">
+        <div className="sidebar">
+            <li className="lisidebar">
                 <a href="">Home</a>
             </li>
-             <li class="lisidebar">
+             <li className="lisidebar">
                 <a href="">Page</a>
             </li>
         </div>

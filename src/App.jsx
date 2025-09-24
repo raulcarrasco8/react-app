@@ -3,6 +3,7 @@ import './App.css'
 
 import Footer from './components/Footer'
 import NavBar from './components/Navbar'
+import RecipesList from './components/RecipesList'
 import SideBar from './components/Sidebar'
 
 
@@ -13,6 +14,7 @@ function App() {
       
       <NavBar />
       <SideBar />
+      <RecipesList/>
       <Footer />
     
     </div>

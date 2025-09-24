@@ -12,11 +12,15 @@
 .navbar,
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: #fff;
   padding: 1rem;
+}
+.footer{
+    justify-content: center;
+
 }
 
 .sidebar {
@@ -27,4 +31,13 @@
 .lisidebar {
   margin: 0.5rem auto;
   padding: 0.5rem;
+}
+.receta{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  border: 1px solid #000;
+}
+p{
+  color: black;
 }
