@@ -3,17 +3,18 @@ import recipes from "../assets/recipes.json";
 
 function RecipesList() {
   const [recipesList, setRecipesList] = useState(recipes);
+
   const deleteRecipe = (recipeId) => {
-    console.log(recipeId);
     const newRecipelist = recipesList.filter((recipeDetails) => {
       if (recipeDetails.id !== recipeId) {
         return true;
-      } else {
+      } else{
         return false;
       }
     });
     setRecipesList(newRecipelist);
   };
+
   return (
     <>
       {recipesList.map((recipeObj) => {
@@ -34,7 +35,11 @@ function RecipesList() {
               ) : (
                 <div> COMIDA BAJA EN CALORIAS</div>
               )}
-              <button onClick={() => { deleteRecipe(recipeObj.id); }} >
+              <button
+                onClick={() => {
+                  deleteRecipe(recipeObj.id);
+                }}
+              >
                 Delete
               </button>
             </div>
@@ -44,4 +49,5 @@ function RecipesList() {
     </>
   );
 }
+
 export default RecipesList;
