@@ -1,13 +1,13 @@
-
+import {NavLink} from "react-router-dom"; 
 
 function SideBar() {
     return (
         <div className="sidebar">
             <li className="lisidebar">
-                <a href="">Home</a>
+                <NavLink to="/">Home</NavLink>
             </li>
              <li className="lisidebar">
-                <a href="">Page</a>
+                <NavLink to="/about">About</NavLink>
             </li>
         </div>
     )
