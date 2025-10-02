@@ -6,6 +6,7 @@
 }
 
 .pantalla {
+  width: 100%;
   background-color: rgb(195, 202, 202);
 }
 
@@ -46,4 +47,26 @@
 }
 .About a:hover{
  background-color: aqua;
+}
+.itemdetails{
+  display: inline-flex;
+}
+.itemdetails .calories{
+  margin: 10px;
+  border: 1px blueviolet solid;
+}
+
+.itemdetails .servings{
+  margin: 10px; 
+  border: 1px green solid;
+}
+.navbar-logo {
+    max-width: 100px;  
+    height: auto;      
+}
+
+.navbar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
 }

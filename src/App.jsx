@@ -8,7 +8,7 @@ import recipes from "./assets/recipes.json";
 import { Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import ItemDetails from "./pages/ItemDetails";
-
+import NewRecipe from "./pages/NewRecipe";
 function App() {
   
   const [recipeItemList, setRecipeItemList] = useState(recipes);
@@ -21,6 +21,12 @@ function App() {
     setRecipeItemList(newList);
   };
 
+  const createRecipe = (recipe)=> {
+    const copyOfRecipeList = [...recipeItemList];
+    copyOfRecipeList.push(recipe);
+    setRecipeItemList(copyOfRecipeList);
+  }
+
   return (
     <div className="pantalla">
       <NavBar />
@@ -29,6 +35,7 @@ function App() {
         <Route path="/" element= {<RecipesList recipeList={recipeItemList}
         onDelete={deleteRecipe}/>}/>
         <Route path="/about" element= {<About/>}/>
+        <Route path="/new" element={<NewRecipe onCreate={createRecipe} />} />
         <Route path="/recipe/:recipeId" element= {<ItemDetails recipeList={recipeItemList}/>}/>
       </Routes>      
       <Footer />
