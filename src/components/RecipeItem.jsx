@@ -21,24 +21,31 @@ function Recipe(props) {
         )}
 
         <Link to={`/recipe/${props.recipeItem.id}`}>
-          <Button variant="filled" color="orange" size="xl" radius="lg" style={{ marginRight: "5px" }}>
+          <Button variant="filled" color="orange" size="xl" radius="lg" style={{ marginRight: "5px", height: "100%" }}>
             More Details
           </Button>
         </Link>
-
+        <div>
         <Button
           onClick={() => props.onDelete(props.recipeItem.id)}
           variant="light"
           color="red"
           size="xl"
           radius="lg"
-          style={{ marginRight: "5px" }}
+          style={{ marginRight: "5px", height: "100%"  }}
         >
           Delete
         </Button>
-
+        </div>
         <Link to={`/modify/${props.recipeItem.id}`}>
-          <Button variant="light" color="blue" size="xl" radius="lg">
+          <Button 
+          variant="light" 
+          color="blue" 
+          size="xl" 
+          radius="lg"
+          style={{ height: "100%" }}
+           >
+            
             Modify
           </Button>
         </Link>
