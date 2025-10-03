@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Button } from "@mantine/core";
 
 function Recipe(props) {
   return (
@@ -19,15 +20,44 @@ function Recipe(props) {
           <div> COMIDA BAJA EN CALORIAS</div>
         )}
         <Link to={`/recipe/${props.recipeItem.id}`}>
-          <button> More Details</button>
+          <Button
+            variant="filled"
+            color="orange"
+            size="xl"
+            radius="lg"
+            style={{ height: "100%", marginRight: "5px" }}
+          >
+            More Details
+          </Button>
         </Link>
-        <button
-          onClick={() => {
-            props.onDelete(props.recipeItem.id);
-          }}
-        >
-          Delete
-        </button>
+        <div>
+          <Button
+            onClick={() => {
+              props.onDelete(props.recipeItem.id);
+            }}
+            variant="light"
+            color="red"
+            size="xl"
+            radius="lg"
+            style={{ height: "100%" }}
+          >
+            Delete
+          </Button>
+        </div>
+        <div>
+          <Button
+            onClick={() => {
+              // props.onModify(props.recipeItem.id);
+            }}
+            variant="light"
+            color="blue"
+            size="xl"
+            radius="lg"
+            style={{ height: "100%" }}
+          >
+            Modify
+          </Button>
+        </div>
       </div>
     </div>
   );

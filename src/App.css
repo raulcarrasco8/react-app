@@ -1,8 +1,6 @@
 #root {
   margin: 0 auto;
   text-align: center;
-  width: 100vw;
-  height: 100vh;
 }
 
 .pantalla {
@@ -38,7 +36,9 @@
   justify-content: center;
   margin: 20px;
   border: 1px solid #000;
-}
+  gap: 15px;
+  padding: 10px; 
+  }
 .About a{
   margin: 0 5px;
   border: 1px solid #000;

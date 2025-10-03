@@ -22,7 +22,7 @@ function RecipeForm(props) {
   const handleSubmit = (values) => {
     // Crear un nuevo objeto receta con id único
     const newRecipe = {
-      id: Date.now(), // o algún otro método de generar ID único
+      id: crypto.randomUUID(), // o algún otro método de generar ID único
       name: values.name,
       calories: values.calories,
       recipeimage: values.recipeimage,
