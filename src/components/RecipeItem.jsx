@@ -9,7 +9,7 @@ function Recipe(props) {
         <img
           src={props.recipeItem.image}
           style={{ border: "1px solid red", maxWidth: "200px" }}
-        ></img>
+        />
         <div>
           <p>Calories: {props.recipeItem.calories}</p>
           <p>Serving: {props.recipeItem.servings}</p>
@@ -17,47 +17,31 @@ function Recipe(props) {
         {props.recipeItem.calories > 400 ? (
           <div>PRECAUCION COMIDA CALORICA</div>
         ) : (
-          <div> COMIDA BAJA EN CALORIAS</div>
+          <div>COMIDA BAJA EN CALORIAS</div>
         )}
+
         <Link to={`/recipe/${props.recipeItem.id}`}>
-          <Button
-            variant="filled"
-            color="orange"
-            size="xl"
-            radius="lg"
-            style={{ height: "100%", marginRight: "5px" }}
-          >
+          <Button variant="filled" color="orange" size="xl" radius="lg" style={{ marginRight: "5px" }}>
             More Details
           </Button>
         </Link>
-        <div>
-          <Button
-            onClick={() => {
-              props.onDelete(props.recipeItem.id);
-            }}
-            variant="light"
-            color="red"
-            size="xl"
-            radius="lg"
-            style={{ height: "100%" }}
-          >
-            Delete
-          </Button>
-        </div>
-        <div>
-          <Button
-            onClick={() => {
-              // props.onModify(props.recipeItem.id);
-            }}
-            variant="light"
-            color="blue"
-            size="xl"
-            radius="lg"
-            style={{ height: "100%" }}
-          >
+
+        <Button
+          onClick={() => props.onDelete(props.recipeItem.id)}
+          variant="light"
+          color="red"
+          size="xl"
+          radius="lg"
+          style={{ marginRight: "5px" }}
+        >
+          Delete
+        </Button>
+
+        <Link to={`/modify/${props.recipeItem.id}`}>
+          <Button variant="light" color="blue" size="xl" radius="lg">
             Modify
           </Button>
-        </div>
+        </Link>
       </div>
     </div>
   );

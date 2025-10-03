@@ -21,7 +21,9 @@ function RecipesList(props) {
           <RecipeItem
             key={recipeObj.id}
             recipeItem={recipeObj}
-            onDelete={props.onDelete}     
+            onDelete={props.onDelete}
+            onModify={props.onModify}     
+     
           />
         );
       })}
